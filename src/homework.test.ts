@@ -23,7 +23,7 @@ describe("Homework 2", () => {
   });
 
   test("isAdmin - should return true if the user is an admin", () => {
-    const admin: Admin = { name: "Tim", isAdmin: true, age: 30 };
+    const admin: Admin = { name: "Tim", isSuperAdmin: true, age: 30 };
     const user: User = { type: "user", name: "John", age: 10 };
 
     expect(isAdmin(admin)).toBe(true);
@@ -32,7 +32,7 @@ describe("Homework 2", () => {
 
   test("isUser - should return true if the user is an admin", () => {
     const user: User = { type: "user", name: "John", age: 10 };
-    const admin: Admin = { name: "Tim", isAdmin: true, age: 30 };
+    const admin: Admin = { name: "Tim", isSuperAdmin: true, age: 30 };
 
     expect(isUser(user)).toBe(true);
     expect(isUser(admin)).toBe(false);
@@ -40,7 +40,7 @@ describe("Homework 2", () => {
 
   test("userGreetingMessage - should return a greeting message", () => {
     const user: User = { type: "user", name: "John", age: 10 };
-    const admin: Admin = { name: "Tim", isAdmin: true, age: 30 };
+    const admin: Admin = { name: "Tim", isSuperAdmin: true, age: 30 };
     const person: Person = { name: "Beth", age: 27 };
 
     expect(userGreetingMessage(user)).toBe("Hello, John. You are a user.");
